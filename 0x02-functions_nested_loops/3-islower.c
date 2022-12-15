@@ -2,6 +2,8 @@
 /**
  *	_islower - check for lowercase character
  *
+ *	@c: member
+ *
  *	Description: 'check for lower character'
  *
  *	Return: 1

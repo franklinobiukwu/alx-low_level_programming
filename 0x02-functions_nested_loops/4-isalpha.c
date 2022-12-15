@@ -2,6 +2,8 @@
 /**
  *	_isalpha - checks for alphanumeric character
  *
+ *	@c: first member
+ *
  *	Return: Always 1;
  */
 

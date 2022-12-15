@@ -2,7 +2,7 @@
 /**
  *	print_sign - print sign of number
  *
- *	Description: 'Prit the sign of a number'
+ *	@n: member
  *
  *	Return: Always 1.
  */
