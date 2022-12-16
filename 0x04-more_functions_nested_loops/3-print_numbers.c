@@ -3,14 +3,19 @@
 /**
  * print_numbers - print numbers from 0 to 9.
  *
- * Return: Void.
+ * Return: here.
  */
 
 void print_numbers(void)
 {
-	char ch;
+	int n;
 
-	for (ch = '0'; ch >= '9'; n++)
+	for (n = '0'; n <= '9'; n++)
+	{
 		_putchar(n);
+	}
+
 	_putchar('\n');
+
+	return;
 }
