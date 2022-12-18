@@ -8,25 +8,27 @@
 
 void more_numbers(void)
 {
-	int r, n, c;
+	int i;
+	int j;
+	int size;
+	int array[] = {48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 49, 50, 51, 52};
 
-	for (r = '0'; r <= '9'; r++)
+	j = 0;
+	size = sizeof(array) / sizeof(array[0]);
+
+
+	while (j < 10)
 	{
-		for (n = '0'; n <= '1'; n++)
+
+		for (i = 0; i < size; i++) /*Loop 9 times*/
 		{
-			for (c = '0'; c <= '9'; c++)
-			{
-				if (n == '0' || n == '1')
-					_putchar(c);
-				if (n == '1')
-				{
-					if (c < 4)
-						continue;
-					_putchar(c);
-				}
-			}
+			if (i > 9)
+				_putchar(array[1]);
+			_putchar(array[i]);
 		}
-	_putchar('\n');
+
+		j++;
+		_putchar('\n');
 	}
 
 }
