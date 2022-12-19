@@ -8,7 +8,7 @@
  * Return: Always 0.
  */
 
-int main()
+int main(void)
 {
 	int i;
 
@@ -23,6 +23,8 @@ int main()
 		else
 			printf("%d ", i);
 	}
+
+	printf ("\n");
 
 	return (0);
 }
