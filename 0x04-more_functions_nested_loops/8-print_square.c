@@ -3,7 +3,9 @@
 /**
  * print_square - prints a square.
  *
- * @size - argument.
+ * @size:  argument.
+ *
+ * Return: void.
  */
 
 void print_square(int size)
