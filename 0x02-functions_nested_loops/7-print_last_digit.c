@@ -2,17 +2,16 @@
 /**
  *	print_last_digit - find it
  *
- *	Description: ''
+ *	@a: function argument.
  *
- *	Return: Always 0;
+ *	Return: Always integer;
  */
 
 int print_last_digit(int a)
 {
-	int r;
+	int n;
 
-	r = (a % 10);
-	_putchar(r);
+	n = (a % 10);
 
-	return (0);
+	return (n);
 }
