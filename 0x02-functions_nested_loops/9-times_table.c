@@ -17,10 +17,13 @@ void times_table(void)
 			t = ('0' + (result / 10));
 			u = ('0' + (result % 10));
 
-			if (t == '0')
-				_putchar (' ');
-			else
-				_putchar (t);
+			if (j != 0)
+			{
+				if (t == '0' && j != 0)
+					_putchar (' ');
+				else
+					_putchar (t);
+			}
 			_putchar (u);
 
 			if (j != 9)
