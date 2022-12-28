@@ -3,20 +3,17 @@
  *	_abs - computes the value of an integer
  *
  *	Description: 'computes the value of an integer'
+ *	@a: function argument
  *
- *	Return: Always 0.
+ *	Return: Absolute Integer.
  */
 
 int _abs(int a)
 {
 
-	if (a < '0')
-	{
-		a = (a * -'1');
-		_putchar(a);
-	}
-	else if (a >= '0')
-		_putchar(a);
+	if (a < 0)
+		return (a * -1);
+	else
+		return (a);
 
-	return (0);
 }
