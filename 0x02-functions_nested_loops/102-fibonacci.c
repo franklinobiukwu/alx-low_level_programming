@@ -7,23 +7,25 @@
 
 int main(void)
 {
-	int i, a, b, c;
+	int i;
 
-	a = 1;
-	b = 2;
 
-	printf("%d, ", a);
-	printf("%d, ", b);
+	unsigned long a = 1;
+	unsigned long b = 2;
+	unsigned long c;
+
+	printf("%lu, ", a);
+	printf("%lu, ", b);
 
 	for (i = 1; i <= 48; i++)
 	{
 		c = a + b;
-		printf("%d", c);
+		printf("%lu", c);
 
 		a = b;
 		b = c;
 
-		if (i != 50)
+		if (i != 48)
 			printf(", ");
 	}
 
