@@ -32,7 +32,7 @@ void print_times_table(int n)
 						_putchar (' ');
 						_putchar (' ');
 					}
-					else if (result >=10 )
+					else if (result >= 10)
 						_putchar (h);
 					_putchar (t);
 					_putchar (u);
