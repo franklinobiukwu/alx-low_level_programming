@@ -3,16 +3,17 @@
 /**
 * _islower - Checks for lowercase character
 *
+* @c:first value
+*
 * Return: On success 1
 */
 
 int _islower(int c)
 {
-	if ( c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
-	} else
-	{
-		return (0);
 	}
+
+	return (0);
 }
