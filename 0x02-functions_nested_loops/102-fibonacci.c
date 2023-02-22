@@ -21,8 +21,12 @@ int main(void)
 		c = a + b;
 
 		printf("%ld", c);
-		printf(",");
-		printf(" ");
+
+		if (i != 50)
+		{
+			printf(",");
+			printf(" ");
+		}
 
 		a = b;
 		b = c;
