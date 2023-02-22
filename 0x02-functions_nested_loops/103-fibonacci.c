@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	long int sum, a, b, c;
+	long int even_sum, sum, a, b, c;
 
 	a = 0;
 	b = 1;
@@ -20,13 +20,15 @@ int main(void)
 
 		if (c % 2 == 0)
 		{
-			sum += c;
+			even_sum += c;
 		}
+
+		sum += c;
 
 		b = c;
 		a = b;
 
-	} while (c < 4000000);
+	} while (sum < 4000000);
 
 	printf("%ld", sum);
 	printf("\n");
