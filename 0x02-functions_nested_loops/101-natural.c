@@ -4,7 +4,8 @@
 /**
 * main - Entry point
 *
-* Description: Computes and prints the sum of all the multiples of 3 0r 5 below 1024 (excluded)
+* Description: Computes and prints the sum of all
+* the multiples of 3 0r 5 below 1024 (excluded)
 *
 * Return: On success 0
 */
@@ -22,8 +23,8 @@ int main(void)
 		}
 	}
 
-	printf ("%d", sum);
-	printf ("\n");
+	printf("%d", sum);
+	printf("\n");
 
 	return (0);
 }
