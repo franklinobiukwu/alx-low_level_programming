@@ -2,6 +2,7 @@
 
 /**
 * print_times_table - Print the n times table
+* @n: parameter
 * Return: void
 */
 
@@ -24,27 +25,25 @@ void print_times_table(int n)
 					_putchar((k % 10) + '0');
 				}
 				else if (k > 9)
-                                {
-                                        _putchar(' ');
-                                        _putchar((k / 10) + '0');
-                                        _putchar((k % 10) + '0');
-                                }
+				{
+					_putchar(' ');
+					_putchar((k / 10) + '0');
+					_putchar((k % 10) + '0');
+				}
 				else if (k <= 9 && j != 0)
-                                {
-                                        _putchar(' ');
-                                        _putchar(' ');
-                                        _putchar(k + '0');
-                                }
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(k + '0');
+				}
 				else if (k == 0 && j == 0)
-                                        _putchar('0');
-
+					_putchar('0');
 				if (j != n)
 				{
 					_putchar(',');
 					_putchar(' ');
 				}
 			}
-
 			_putchar('\n');
 		}
 	}
