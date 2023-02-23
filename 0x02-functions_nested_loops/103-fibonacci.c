@@ -14,23 +14,24 @@ int main(void)
 
 	a = 0;
 	b = 1;
+	even_sum = 0;
 
 	do {
 		c = a + b;
 
-		if (c % 2 == 0)
+		if ((c % 2) == 0)
 		{
 			even_sum += c;
 		}
 
 		sum += c;
 
-		b = c;
 		a = b;
+		b = c;
 
-	} while (sum < 4000000);
+	} while (c <= 4000000);
 
-	printf("%ld", sum);
+	printf("%lu", even_sum);
 	printf("\n");
 
 	return (0);
