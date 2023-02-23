@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	long int even_sum, sum, a, b, c;
+	long int even_sum, a, b, c;
 
 	a = 0;
 	b = 1;
@@ -23,8 +23,6 @@ int main(void)
 		{
 			even_sum += c;
 		}
-
-		sum += c;
 
 		a = b;
 		b = c;
