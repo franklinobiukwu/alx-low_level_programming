@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
-* _isdigit - Checks for digit between 0 and 9
+* _isdigit - Checks if argument is digit between zero and nine
 *
+* Description: The fuction checks if c is a digit between 0 and 9
 * @c: parameter
 *
-* Returns: 0 or 1
+* Return: 0 or 1 Always
 */
 
 int _isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if ((c >= 0 && c <= 9) || (c >= '0' && c <= '9'))
 	{
 		return (1);
 	}
