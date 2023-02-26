@@ -28,4 +28,6 @@ int main(void)
 	printf("%ld", factor);
 
 	printf("\n");
+
+	return (0);
 }
