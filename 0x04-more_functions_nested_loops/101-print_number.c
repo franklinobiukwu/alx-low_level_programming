@@ -11,18 +11,38 @@
 void print_number(int n)
 {
 	int x = 0;
-	int i, digit;
+	int y, i, j, p, nn, digit;
 
-	while (!(n < 10))
+	if (n < 0)
 	{
-		n /= 10;
+		nn = -n;
+		n = nn;
+		_putchar('-');
+	}
+	else
+	{
+		nn = n;
+		n = nn;
+	}
+	p = 1;
+	while (!(nn < 10))
+	{
+		nn /= 10;
 		x++;
 	}
-
-	for (i = 0; i <= x; i++)
+	y = x;
+	for (i = 0; i <= y; i++)
 	{
-		digit = n/(10 * x);
+		for (j = 0; j < x; j++)
+		{
+			p *= 10;
+		}
+		digit = n / p;
+		if (digit >= 10)
+			digit %= 10;
 		_putchar(digit + '0');
 		x--;
+		p = 1;
 	}
+	_putchar('\n');
 }
