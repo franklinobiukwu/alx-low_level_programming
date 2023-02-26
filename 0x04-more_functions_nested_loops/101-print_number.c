@@ -1,48 +1,28 @@
 #include "main.h"
 
 /**
-* print_number - print an integer
+* print_number - print integers
 *
 * @n: parameter
 *
-* Return: 0
+* Return: void
 */
 
 void print_number(int n)
 {
-	int x = 0;
-	int y, i, j, p, nn, digit;
-
 	if (n < 0)
 	{
-		nn = -n;
-		n = nn;
+		n = -n;
 		_putchar('-');
-	}
-	else
+	} else
 	{
-		nn = n;
-		n = nn;
+		n = n;
 	}
-	p = 1;
-	while (!(nn < 10))
+
+	if (n / 10)
 	{
-		nn /= 10;
-		x++;
+		print_number(n / 10);
 	}
-	y = x;
-	for (i = 0; i <= y; i++)
-	{
-		for (j = 0; j < x; j++)
-		{
-			p *= 10;
-		}
-		digit = n / p;
-		if (digit >= 10)
-			digit %= 10;
-		_putchar(digit + '0');
-		x--;
-		p = 1;
-	}
-	_putchar('\n');
+
+	_putchar((n % 10) + '0');
 }
