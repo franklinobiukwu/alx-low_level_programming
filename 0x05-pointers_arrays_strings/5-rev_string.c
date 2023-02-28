@@ -22,7 +22,7 @@ void rev_string(char *s)
 	strlen = i - 1;
 	halfstr = strlen / 2;
 
-	for (i = 0; i < halfstr; i++)
+	for (i = 0; i <= halfstr; i++)
 	{
 		temp = s[i];
 		s[i] = s[strlen];
