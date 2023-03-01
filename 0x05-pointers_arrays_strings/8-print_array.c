@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
-* print_array - Print n elements of an array of integers, followed by a new line
+* print_array - Print n elements of an array of integers,followed by a new line
 *
 * @a: first parameter
-* @b: second parameter
+* @n: second parameter
 *
 * Return: void
 */
