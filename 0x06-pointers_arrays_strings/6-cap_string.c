@@ -17,6 +17,8 @@ char *cap_string(char *n)
 
 	for (i = 0; n[i] != '\0'; i++)
 	{
+		if (n[0] >= 'a' && n[0] <= 'z')
+			n[0] -= 32;
 		for (j = 0; spec[j] != '\0'; j++)
 		{
 			if (n[i] == spec[j] && (n[i + 1] >= 'a' && n[i + 1] <= 'z'))
