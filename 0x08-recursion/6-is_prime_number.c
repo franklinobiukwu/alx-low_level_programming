@@ -16,7 +16,7 @@ int is_prime(int n, int i)
 	if (n % i == 0 && i != n)
 		return (0);
 	else if (i < n)
-		return(is_prime(n, ++i));
+		return (is_prime(n, ++i));
 	return (1);
 }
 
@@ -24,7 +24,6 @@ int is_prime(int n, int i)
 * is_prime_number - returns 1 if n is a prime number, otherwise returns 0
 *
 * @n: Primary number
-* @i: Counter
 *
 * Return: 0 or 1
 */
