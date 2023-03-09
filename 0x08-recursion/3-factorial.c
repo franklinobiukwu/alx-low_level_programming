@@ -21,7 +21,7 @@ int factorial(int n)
 		return (1);
 	}
 	else
-		facto = n x factorial(n - 1);
+		facto = n * factorial(n - 1);
 
 	return (facto);
 }
