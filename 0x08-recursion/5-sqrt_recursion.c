@@ -8,15 +8,30 @@
 * Return: integer
 */
 
+
 int _sqrt_recursion(int n)
 {
-	int i;
+	int i = 0, val;
 
-	for (i = 0; i <= n; i++)
-	{
-		if (i * i == n)
-			return (i);
-	}
+	val = _sqrt(n, i);
 
+	return (val);
+}
+
+/**
+* _sqrt - finds and returns the natural square root of an number
+*
+* @n: number
+* @i: counter, test case
+*
+* Return: integer
+*/
+
+int _sqrt(int n, int i)
+{
+	if (i * i == n)
+		return (i);
+	else if (i < n)
+		return (_sqrt(n, ++i));
 	return (-1);
 }
