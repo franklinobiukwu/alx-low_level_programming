@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	else
-		printf("%d", product);
+		printf("%d\n", product);
 
 	return (0);
 }
