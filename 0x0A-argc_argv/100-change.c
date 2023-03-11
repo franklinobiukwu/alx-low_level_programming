@@ -13,7 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	int coin = 0, cent;
+	int coins = 0, cents;
 
 	cents = atoi(argv[argc - 1]);
 	if (argc != 2)
