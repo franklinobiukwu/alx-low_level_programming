@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	int a, b, product;
 
-	a = atoi(argv[argc -2]);
+	a = atoi(argv[argc - 2]);
 	b = atoi(argv[argc - 1]);
 
 	product = a * b;
