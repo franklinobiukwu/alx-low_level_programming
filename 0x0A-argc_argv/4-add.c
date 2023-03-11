@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -19,8 +20,8 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; i < argc; i++)
 		{
-			if (argv[i] >= 0)
-				sum += argv[i];
+			if (atoi(argv[i]) >= 0)
+				sum += atoi(argv[i]);
 			else
 			{
 				printf("Error\n");
