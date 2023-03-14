@@ -22,11 +22,11 @@ char *create_array(unsigned int size, char c)
 
 	arr = (char *)malloc(size * sizeof(char));
 
+	if (arr == NULL) /* Check for allocation error*/
+		return (NULL);
+
 	for (i = 0; i < size; i++)
 		arr[i] = c;
-
-	if (arr == NULL)
-		return (0);
 
 	arr[i] = '\0';
 
