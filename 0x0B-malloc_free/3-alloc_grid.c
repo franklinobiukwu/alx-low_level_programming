@@ -15,6 +15,9 @@ int **alloc_grid(int width, int height)
 	int **ptr;
 	int i, j;
 
+	/*return NULL if width or height is 0*/
+	if (width <= 0 || height <= 0)
+		return (NULL);
 	/* Point ptr to pointer to rows*/
 	ptr = malloc(height * sizeof(int *));
 
