@@ -14,7 +14,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int ls1, ls2, blck_size, i, j;
+	unsigned int ls1, ls2, blck_size, i, j;
 	/*count string s1 and s2*/
 	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 		continue;
