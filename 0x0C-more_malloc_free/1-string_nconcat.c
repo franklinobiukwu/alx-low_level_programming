@@ -20,6 +20,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	if (n < 0)
+		return (NULL);
 	/*count string s1 and s2*/
 	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 		continue;
