@@ -15,6 +15,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
 	unsigned int ls1, ls2, blck_size, i, j;
+	/*treat s1 and s2 as empty string if NULL*/
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	/*count string s1 and s2*/
 	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 		continue;
