@@ -4,8 +4,8 @@
 /**
 * array_range - creates an array of integers
 *
-* @min:
-* @max:
+* @min: minmum array value
+* @max: maximum array value
 *
 * Return: integer
 */
@@ -19,8 +19,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 	/*count integer values from min to max*/
-	for (i = min, n = 1; i <= max; i++, n++)
-		continue;
+	n = (max + 1) - min;
 	/*allocate memory using malloc*/
 	arr = malloc(n * sizeof(int));
 	/*return NULL if malloc fails*/
