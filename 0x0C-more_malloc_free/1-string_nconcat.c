@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*sum length of s1 and s2 to determing total memory needed*/
 	blck_size = ls1 + ls2;
 	/*allocate memory of size blck_size + 1 for null character*/
-	ptr = malloc(blck_size * sizeof(char) + 1);
+	ptr = malloc(blck_size * sizeof(*ptr) + 1);
 	/*return NULL if memory allocation fails*/
 	if (ptr == NULL)
 		return (NULL);
