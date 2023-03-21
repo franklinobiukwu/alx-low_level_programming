@@ -16,10 +16,10 @@ void print_dog(struct dog *d)
 	if (d == NULL)
 		return;
 	/*change value of element of d to nill if NULL*/
-	if (*d.name == NULL)
-		*d.name = "(nill)";
-	if (*d.owner == NULL)
-		*d.owner = "(nill)";
+	if (d->name == NULL)
+		d->name = "(nill)";
+	if (d->owner == NULL)
+		d->owner = "(nill)";
 	/*print struct dog*/
-	printf("Name: s%\n Age: %f\n Owner: %s\n", *d.name, *d.age, *d.owner);
+	printf("Name: s%\n Age: %f\n Owner: %s\n", d->name, d->age, d->owner);
 }
