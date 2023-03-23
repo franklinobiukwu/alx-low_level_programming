@@ -26,7 +26,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		h = (*cmp)(array[index]);
 		/*return index if function returns true*/
-		if (h == 1)
+		if (h != 0)
 		{
 			return (index);
 		}
