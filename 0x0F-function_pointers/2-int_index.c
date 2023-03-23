@@ -18,7 +18,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	/*return 0 if array, size, or cmp is NULL*/
 	if (!array || !size || !cmp)
-		return (0);
+		return (NULL);
 	if (size <= 0)
 		return (-1);
 	/*loop through elements of array and set each element as input to cmp*/
