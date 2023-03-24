@@ -17,6 +17,9 @@ void print_all(const char * const format, ...)
 	char *s, *separator;
 	unsigned int i = 0;
 
+	if (format == NULL)
+		return;
+
 	/*start list*/
 	va_start(anything, format);
 
