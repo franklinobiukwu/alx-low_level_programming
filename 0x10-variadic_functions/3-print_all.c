@@ -14,13 +14,13 @@
 void print_all(const char * const format, ...)
 {
 	va_list anything;
-	char *s, separator;
+	char *s, *separator;
 	unsigned int i = 0;
 
 	/*start list*/
 	va_start(anything, format);
 
-	separator = "",
+	separator = "";
 	/*loop through members of list*/
 	while (format && format[i])
 	{
