@@ -7,6 +7,7 @@
 *
 * @format: list of types of arguement
 *
+* Return: void
 */
 
 void print_all(const char * const format, ...)
@@ -20,7 +21,7 @@ void print_all(const char * const format, ...)
 
 	separator = "",
 	/*loop through members of list*/
-	while(format && format[i])
+	while (format && format[i])
 	{
 		switch (format[i])
 		{
@@ -49,5 +50,5 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	/*end list*/
 	va_end(anything);
-	
+
 }
