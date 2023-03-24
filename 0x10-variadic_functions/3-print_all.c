@@ -14,45 +14,41 @@
 void print_all(const char * const format, ...)
 {
 	va_list anything;
-	char *s, *separator;
+	char *s;
 	unsigned int i = 0;
-
-	if (format == NULL)
-		return;
 
 	/*start list*/
 	va_start(anything, format);
 
-	separator = "";
 	/*loop through members of list*/
 	while (format && format[i])
 	{
 		switch (format[i])
 		{
 			case 'c':
-				printf("%s%c", separator, va_arg(anything, int));
+				printf("%c", va_arg(anything, int));
 				break;
 			case 'i':
-				printf("%s%d", separator, va_arg(anything, int));
+				printf("%d", va_arg(anything, int));
 				break;
 			case 'f':
-				printf("%s%f", separator, va_arg(anything, double));
+				printf("%f", va_arg(anything, double));
 				break;
 			case 's':
 				s = va_arg(anything, char *);
 				if (s == NULL)
 					printf("(nil)");
-				printf("%s%s", separator, s);
+				printf("%s", s);
 				break;
 			default:
 				i++;
 				continue;
 		}
-		separator = ", ";
+		if (format[i + 1] != '\0' && format[i] != '\0')
+			printf(", ");
 		i++;
 	}
-	printf("\n");
 	/*end list*/
 	va_end(anything);
-
+	printf("\n");
 }
