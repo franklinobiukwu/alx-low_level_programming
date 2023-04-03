@@ -22,7 +22,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (newNode == NULL)
 		return (NULL);
 	/*duplicate string and store value in new node*/
-	newNode->str=strdup(str);
+	newNode->str = strdup(str);
 	/*obtain length of string*/
 	for (i = 0; str[i]; i++)
 		;
