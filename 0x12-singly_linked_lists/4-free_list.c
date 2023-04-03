@@ -3,7 +3,7 @@
 /**
  * free_list - frees a list
  *
- * @head - pointer to head of linked list
+ * @head: pointer to head of linked list
  *
  * Return: void
  */
