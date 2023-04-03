@@ -10,6 +10,8 @@
 
 void free_list(list_t *head)
 {
+	/*declare pointer*/
+	list_t *currentNode;
 	/*free head if NULL*/
 	if (head == NULL)
 		free(head);
