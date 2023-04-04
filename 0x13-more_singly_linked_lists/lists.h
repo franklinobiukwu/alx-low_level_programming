@@ -3,6 +3,7 @@
 
 /*header files*/
 #include <stdio.h>
+#include <stdlib.h>
 
 /*struct definitions*/
 /**
