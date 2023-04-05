@@ -10,7 +10,7 @@
 
 void free_listint(listint_t *head)
 {
-	listint_t hold;
+	listint_t *hold;
 
 	/*traverse list and free each node while node not NULL*/
 	while (head)
