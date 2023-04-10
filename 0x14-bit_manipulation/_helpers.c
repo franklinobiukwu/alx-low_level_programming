@@ -78,3 +78,31 @@ int _convertdtobase(int num, int base)
 
 	return (count);
 }
+
+/**
+ * _convertbtodec - convert binary number to decimal
+ *
+ * @bin: binary number
+ * @count: base 10
+ *
+ * Return: binary conversion
+ */
+
+int _convertbtodec(int bin)
+{
+	int val = 0;
+	int power = 1;
+
+	while (bin > 9)
+	{
+		int digit = bin % 10;
+		/*validate if character is a number*/
+		if (digit != 0 && digit != 1)
+			return (-1);
+		val += digit * power;
+		power *= 2;
+		bin /= 10;
+	}
+
+	return (val);
+}

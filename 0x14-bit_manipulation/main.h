@@ -7,6 +7,7 @@
 /*helper function prototypes*/
 int _strlen(const char *str);
 unsigned int _pow(int num, int exp);
+int _convertbtodec(int bin);
 
 /*prototypes*/
 int _putchar(char c);
