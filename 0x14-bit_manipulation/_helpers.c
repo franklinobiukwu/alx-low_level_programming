@@ -53,3 +53,28 @@ unsigned int _pow(int num, int exp)
 
 	return (result);
 }
+
+/**
+ * _convertdtobase - convert from base 10 to desired base
+ *
+ * @num: base 10 number to be converted
+ * @base: base to be converted to
+ *
+ * Return: result of conversion
+ */
+
+int _convertdtobase(int num, int base)
+{
+	int count = 0;
+	char digit[] = "0123456789ABCDEF";
+
+	if (num >= base)
+	{
+		count = _convertdtobase((num / base), base);
+		num = _putchar(num % base);
+	}
+
+	count = _putchar(digit[num]);
+
+	return (count);
+}
