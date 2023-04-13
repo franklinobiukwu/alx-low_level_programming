@@ -40,6 +40,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	/*write NULL character at the end*/
 	buff[writeCount] = '\0';
-
+	/*close file*/
+	close(fd);
+	/*free memory*/
+	free(buff);
 	return (writeCount);
 }
