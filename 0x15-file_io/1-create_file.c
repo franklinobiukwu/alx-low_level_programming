@@ -25,9 +25,14 @@ int create_file(const char *filename, char *text_content)
 	/*return -1 on creation failure*/
 	if (fd == -1)
 		return (-1);
+	/*set NULL content*/
+	if (!text_content)
+		text_content = "";
 	/*count text*/
-	while (text_content)
+	while (text_content[textCount] != '\0')
+	{
 		textCount++;
+	}
 	/*write to file*/
 	writeCount = write(fd, text_content, textCount);
 	/*return -1 if write fails*/
