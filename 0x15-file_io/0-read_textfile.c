@@ -16,9 +16,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	void *buf;
-	ssize_t nu_read, nu_written, check;
+	ssize_t nu_read, nu_written;
 
-	check = letters;
 	if (filename == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
@@ -28,7 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/*create buffer*/
 	buf = malloc(sizeof(char *) * letters);
 	/*return 0 if malloc fails*/
-	if (buf == -1)
+	if (buf == NULL)
 	{
 		close(fd);
 		return (0);
@@ -44,14 +43,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	/*write to to POSIX standard output*/
-	nu_written = write(STDOUT_FILENO, buf, letters);
-	/*return 0 if write fails or doesn't write expected size*/
-	if (nu_written == -1 || nu_written != check)
-	{
-		free(buf);
-		return (0);
-	}
+	nu_written = write(STDOUT_FILENO, buf, nu_read);
 	free(buf);
+	/*return 0 if write fails or doesn't write expected size*/
+	if (nu_read != nu_written)
+		return (0);
+
 	return (nu_written);
 
 }
