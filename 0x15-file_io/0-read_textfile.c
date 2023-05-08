@@ -19,7 +19,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t nu_read, nu_written, check;
 
 	check = letters;
-
 	if (filename == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
@@ -41,7 +40,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/*return 0 if read fails*/
 	if (nu_read == -1)
 	{
-		/*free buffer*/
 		free(buf);
 		return (0);
 	}
@@ -50,14 +48,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/*return 0 if write fails or doesn't write expected size*/
 	if (nu_written == -1 || nu_written != check)
 	{
-		/*free buffer*/
 		free(buf);
 		return (0);
 	}
-
-	/*free buffer*/
 	free(buf);
-
 	return (nu_written);
 
 }
