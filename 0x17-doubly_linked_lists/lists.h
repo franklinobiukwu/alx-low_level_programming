@@ -3,6 +3,7 @@
 
 /*HEADER FILES*/
 #include <stdio.h>
+#include <stdlib.h>
 
 /*STRUCTS*/
 /**
