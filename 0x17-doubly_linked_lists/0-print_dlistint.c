@@ -7,7 +7,7 @@
  *
  * @h : pointer to list
  *
- * Return: donno
+ * Return: number of node in list
  */
 
 size_t print_dlistint(const dlistint_t *h)
@@ -16,7 +16,7 @@ size_t print_dlistint(const dlistint_t *h)
 
 	/*Return -1 if list is NULL*/
 	if (h == NULL)
-		return (-1);
+		return (0);
 	/*Print List*/
 	while (h)
 	{
