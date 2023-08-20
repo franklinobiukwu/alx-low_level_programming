@@ -44,7 +44,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		current = current->next;
 	}
 	/*Return NULL if index is out of range*/
-	if (current == NULL && idx > count)
+	if (current == NULL)
 		return (NULL);
 
 	return (new_node);
