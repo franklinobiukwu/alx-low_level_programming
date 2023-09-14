@@ -21,7 +21,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 
 	/*Determine Index of value to be retrieved*/
-	index = key_index((unsigned char*) key,  ht->size);
+	index = key_index((unsigned char *) key,  ht->size);
 
 	/*Return NULL if index is beyond table size*/
 	if (index >= ht->size)
