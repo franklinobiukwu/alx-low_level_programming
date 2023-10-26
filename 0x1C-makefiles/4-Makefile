@@ -1,0 +1,31 @@
+# set GCC compiler as variable
+CC=gcc
+Rm=rm
+
+# object files to compile to final program
+SRC=main.c school.c
+OBJ=$(SRC:.c=.o)
+
+# This is the flag to compile source files to object code
+CFLAGS=-Wall -Werror -Wextra -pedantic -c
+
+# Name of the executable (filnal output file)
+NAME=school
+
+# default target
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o:%.c
+	$(CC) $(CFLAGS) $< -o $@
+
+oclead:
+	$(RM) -rf *.o
+
+clean:
+	$(RM) -rf $(NAME) *~ *# *.swp *.bak
+
+fclean:
+	$(RM) -rf $(NAME) *~ *# *.swp *.bak *.o
