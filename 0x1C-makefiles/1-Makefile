@@ -10,11 +10,5 @@ CFLAGS=-Wall -Werror -c
 
 all: prog
 
-prog: $(FILES)
-	$(CC) $(FILES) -o school
-
-school.o: school.c
-	$(CC) $(CFLAGS) school.c -o $@
-
-main.o: main.c
-	$(CC) $(CFLAGS) main.c -o $@
+prog: $(SRC)
+	$(CC) $(SRC) -o school
