@@ -2,8 +2,8 @@
 CC=gcc
 
 # object files to compile to final program
-OBJ=main.o school.o
 SRC=main.c school.c
+OBJ=$(SRC:.c=.o)
 
 # This is the flag to compile source files to object code
 CFLAGS=-c
