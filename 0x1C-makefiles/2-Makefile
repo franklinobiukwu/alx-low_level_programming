@@ -11,15 +11,14 @@ CFLAGS=-c
 # Name of the executable (filnal output file)
 NAME=school
 
-all: prog
+# default target
+all: $(NAME)
 
-prog: $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-main.o: main.c
-	$(CC) $(CFLAGS) -o $@ main.c
+%.o:%.c
+	$(CC) $(CFLAGS) $< -o $@
 
-school.o: school.c
-	$(CC) $(CFLAGS) -o $@ school.c
 clean:
 	rm -rf $(NAME) *.o
